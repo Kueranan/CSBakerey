@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Bakery - Premium Halal Croissants</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf8f5',
+                            100: '#f9eee6',
+                            200: '#f2d6c2',
+                            300: '#eab99a',
+                            400: '#e1956a',
+                            500: '#d97736', // Primary Orange/Brown
+                            600: '#c55e24',
+                            700: '#a5491f',
+                            800: '#8c421b',
+                            900: '#4a2311', // Dark Brown
+                        },
+                        halal: {
+                            500: '#10b981',
+                            600: '#059669', // Primary Emerald
+                            700: '#047857',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(74, 35, 17, 0.75), rgba(74, 35, 17, 0.6)), url('https://images.unsplash.com/photo-1555507036-ab1d4075c6f1?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .pattern-bg {
+            background-color: #fdf8f5;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2.5L22.5 16H40v2H22.5v2.5L20 20.5zM0 38h20v2.5l2.5-2.5H40v-2H22.5V33.5L20 36H0v2zm0-4h20v-2.5L22.5 34H40v-2H22.5v-2.5L20 32H0v2z' fill='%23d97736' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #d97736; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a5491f; }
+    </style>
+</head>
+<body class="bg-brand-50 text-gray-800 antialiased font-sans selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 glass-panel rounded-full px-6 shadow-sm border border-white/20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <svg class="h-10 w-10 text-brand-500 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2C6.5 2 2 6.5 2 12c0 2.5 1 4.5 2.5 6 .5.5 1 1.5 1 2.5v1h13v-1c0-1 .5-2 1-2.5 1.5-1.5 2.5-3.5 2.5-6 0-5.5-4.5-10-10-10z"></path>
+                        <path d="M8 8c1.5 1 3 1.5 4 1.5s2.5-.5 4-1.5"></path>
+                        <path d="M7 12c1.5 1 3.5 1.5 5 1.5s3.5-.5 5-1.5"></path>
+                        <path d="M8 16c1.5 1 3 1.5 4 1.5s2.5-.5 4-1.5"></path>
+                    </svg>
+                    <div class="flex flex-col justify-center">
+                        <span class="font-serif font-bold text-xl tracking-wide text-brand-900 leading-none">CS BAKERY</span>
+                        <span class="text-[10px] uppercase tracking-widest text-brand-500 font-semibold mt-1">Handcrafted Goods</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu (Removed HR & Halal Button) -->
+                <div class="hidden xl:flex items-center space-x-6">
+                    <a href="#about" class="text-gray-700 hover:text-brand-500 font-medium transition-colors text-sm uppercase tracking-wide">เกี่ยวกับเรา</a>
+                    <a href="#standards" class="text-gray-700 hover:text-brand-500 font-medium transition-colors text-sm uppercase tracking-wide">มาตรฐาน</a>
+                    <a href="#products" class="text-gray-700 hover:text-brand-500 font-medium transition-colors text-sm uppercase tracking-wide">ผลิตภัณฑ์</a>
+                    <a href="#hcp" class="text-gray-700 hover:text-brand-500 font-medium transition-colors text-sm uppercase tracking-wide">กระบวนการ</a>
+                    <a href="#quality" class="bg-brand-500 text-white px-5 py-2 rounded-full font-medium hover:bg-brand-600 transition-colors text-sm uppercase tracking-wide shadow-md">การควบคุมคุณภาพ</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="xl:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-500 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel (Hidden by default) -->
+        <div id="mobile-menu" class="hidden xl:hidden glass-panel mt-2 mx-4 rounded-2xl shadow-lg border border-white/20 overflow-hidden">
+            <div class="px-4 pt-2 pb-4 space-y-1 flex flex-col">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">เกี่ยวกับเรา</a>
+                <a href="#standards" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">มาตรฐานสากล</a>
+                <a href="#products" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">ผลิตภัณฑ์</a>
+                <a href="#hcp" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">กระบวนการฮาลาล</a>
+                <a href="#quality" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">การควบคุมคุณภาพ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-900/90"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-8">
+                <i class="fa-solid fa-wheat-awn text-brand-300"></i> EST. 2023
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 drop-shadow-xl leading-tight">
+                Premium Halal<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-500">Frozen Croissants</span>
+            </h1>
+            <p class="mt-6 text-xl md:text-2xl text-brand-100 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
+                "คุณภาพมาตรฐาน สะอาด ปลอดภัย<br>ถูกต้องตามหลักการศาสนาอิสลาม"
+            </p>
+            <div class="mt-12 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#products" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-brand-500/50 flex items-center justify-center gap-2">
+                    ดูผลิตภัณฑ์ของเรา <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#policy" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-medium transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-certificate text-halal-500"></i> นโยบายฮาลาล
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+            <a href="#about" class="text-white/70 hover:text-white">
+                <i class="fa-solid fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Company Section -->
+    <section id="about" class="py-24 pattern-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image grid -->
+                <div class="grid grid-cols-2 gap-4 relative">
+                    <div class="absolute -inset-4 bg-brand-200/50 rounded-3xl transform rotate-3 -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop" alt="" class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1d4075c6f1?q=80&w=600&auto=format&fit=crop" alt="" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                    
+ 
