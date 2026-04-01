@@ -63,11 +63,9 @@
 </head>
 <body class="bg-brand-50 text-gray-800 antialiased font-sans selection:bg-brand-500 selection:text-white">
 
-    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 glass-panel rounded-full px-6 shadow-sm border border-white/20">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
                     <svg class="h-10 w-10 text-brand-500 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 2C6.5 2 2 6.5 2 12c0 2.5 1 4.5 2.5 6 .5.5 1 1.5 1 2.5v1h13v-1c0-1 .5-2 1-2.5 1.5-1.5 2.5-3.5 2.5-6 0-5.5-4.5-10-10-10z"></path>
@@ -81,7 +79,6 @@
                     </div>
                 </div>
                 
-                <!-- Desktop Menu (Removed HR & Halal Button) -->
                 <div class="hidden xl:flex items-center space-x-6">
                     <a href="#about" class="text-gray-700 hover:text-brand-500 font-medium transition-colors text-sm uppercase tracking-wide">เกี่ยวกับเรา</a>
                     <a href="#standards" class="text-gray-700 hover:text-brand-500 font-medium transition-colors text-sm uppercase tracking-wide">มาตรฐาน</a>
@@ -90,7 +87,6 @@
                     <a href="#quality" class="bg-brand-500 text-white px-5 py-2 rounded-full font-medium hover:bg-brand-600 transition-colors text-sm uppercase tracking-wide shadow-md">การควบคุมคุณภาพ</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="xl:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-500 focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
@@ -99,19 +95,17 @@
             </div>
         </div>
         
-        <!-- Mobile Menu Panel (Hidden by default) -->
-        <div id="mobile-menu" class="hidden xl:hidden glass-panel mt-2 mx-4 rounded-2xl shadow-lg border border-white/20 overflow-hidden">
+        <div id="mobile-menu" class="hidden xl:hidden glass-panel mt-2 mx-4 rounded-2xl shadow-lg border border-white/20 overflow-hidden absolute w-[calc(100%-2rem)] z-40 top-20">
             <div class="px-4 pt-2 pb-4 space-y-1 flex flex-col">
-                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">เกี่ยวกับเรา</a>
-                <a href="#standards" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">มาตรฐานสากล</a>
-                <a href="#products" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">ผลิตภัณฑ์</a>
-                <a href="#hcp" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">กระบวนการฮาลาล</a>
-                <a href="#quality" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg">การควบคุมคุณภาพ</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg mobile-link">เกี่ยวกับเรา</a>
+                <a href="#standards" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg mobile-link">มาตรฐานสากล</a>
+                <a href="#products" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg mobile-link">ผลิตภัณฑ์</a>
+                <a href="#hcp" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-50 hover:text-brand-500 rounded-lg mobile-link">กระบวนการฮาลาล</a>
+                <a href="#quality" class="block px-3 py-3 text-base font-medium text-brand-600 hover:bg-brand-50 hover:text-brand-500 rounded-lg mobile-link">การควบคุมคุณภาพ</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-900/90"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
@@ -135,7 +129,6 @@
             </div>
         </div>
         
-        <!-- Scroll indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
             <a href="#about" class="text-white/70 hover:text-white">
                 <i class="fa-solid fa-chevron-down text-3xl"></i>
@@ -143,14 +136,66 @@
         </div>
     </section>
 
-    <!-- About Company Section -->
     <section id="about" class="py-24 pattern-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Image grid -->
                 <div class="grid grid-cols-2 gap-4 relative">
                     <div class="absolute -inset-4 bg-brand-200/50 rounded-3xl transform rotate-3 -z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop" alt="" class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
-                    <img src="https://images.unsplash.com/photo-1555507036-ab1d4075c6f1?q=80&w=600&auto=format&fit=crop" alt="" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop" alt="Bakery Process" class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1d4075c6f1?q=80&w=600&auto=format&fit=crop" alt="Fresh Croissants" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                </div>
+
+                <div class="space-y-6">
+                    <div class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-600 text-sm font-semibold tracking-wider uppercase mb-2">
+                        เรื่องราวของเรา
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-900 leading-tight">
+                        จุดเริ่มต้นของความอร่อย<br>
+                        <span class="text-brand-500">ที่ได้มาตรฐานฮาลาล</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        CS Bakery ก่อตั้งขึ้นด้วยความตั้งใจที่จะส่งมอบครัวซองต์คุณภาพระดับพรีเมียม ที่ผ่านการคัดสรรวัตถุดิบชั้นเลิศ นำเข้าจากแหล่งที่เชื่อถือได้ พร้อมกระบวนการผลิตที่ใส่ใจในทุกขั้นตอน
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        เราให้ความสำคัญอย่างยิ่งยวดกับมาตรฐานฮาลาล เพื่อให้ลูกค้าทุกท่านมั่นใจได้ว่าผลิตภัณฑ์ทุกชิ้นของเรา สะอาด ปลอดภัย และถูกต้องตามหลักศาสนาอิสลาม 100%
+                    </p>
+                    
+                    <div class="pt-6 flex gap-8 border-t border-brand-200">
+                        <div>
+                            <p class="text-3xl font-bold text-brand-600">100%</p>
+                            <p class="text-sm text-gray-500 mt-1">Halal Certified</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-brand-600">Premium</p>
+                            <p class="text-sm text-gray-500 mt-1">Quality Ingredients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
+
+            // Toggle menu
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close menu when a link is clicked
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
                     
  
